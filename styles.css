@@ -1,0 +1,109 @@
+button {
+  margin-top: 10px;
+}
+
+.box {
+  height: 25px;
+  width: 2px;
+}
+
+/*.row200 .box,
+.row199 .box,
+.row198 .box,
+.row197 .box,
+.row196 .box,
+.row195 .box,
+.row194 .box,
+.row199 .box,
+.row192 .box,
+.row199 .box,
+.row190 .box,
+.row199 .box,
+.row188 .box,
+.row199 .box,
+.row186 .box,
+.row199 .box,
+.row184 .box,
+.row199 .box,
+.row182 .box,
+.row180 .box,
+.row178 .box,
+.row176 .box,
+.row174 .box,
+.row172 .box,
+.row170 .box,
+.row168 .box,
+.row166 .box,
+.row164 .box,
+.row162 .box,
+.row160 .box,
+.row158 .box,
+.row156 .box,
+.row154 .box,
+.row152 .box{
+    width:15px;
+}
+    */
+
+
+.row199 .seat,
+.row197 .seat,
+.row195 .seat,
+.row193 .seat,
+.row191 .seat,
+.row189 .seat,
+.row187 .seat,
+.row185 .seat,
+.row183 .seat,
+.row181 .seat,
+.row179 .seat,
+.row177 .seat,
+.row175 .seat,
+.row173 .seat,
+.row171 .seat,
+.row169 .seat,
+.row167 .seat,
+.row165 .seat,
+.row163 .seat,
+.row161 .seat,
+.row159 .seat,
+.row157 .seat,
+.row155 .seat,
+.row153 .seat,
+.row151 .seat{
+  border: 0.1px solid red;
+}
+
+.bigBox > div {
+  width: 14px;
+}
+
+
+
+.aisle {
+  background-color: grey;
+  border: 0.1px solid green;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  color: black;
+
+  display: flex;
+  padding-top: 200px;
+}
+
+body {
+  background-color: white;
+  background-image: url("./plane.png") ;
+  color: black;
+  
+}
+
+.occupied {
+  background-color: blue;
+}
