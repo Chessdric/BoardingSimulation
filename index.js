@@ -20,7 +20,7 @@ let container = document.getElementById("container");
 container.innerHTML = htmlElements;
 
 $.getJSON(
-  "output.json",
+  "./output.json",
   function (output) {
     var out = output.everyStep.length;
     button = document.getElementById("button");
