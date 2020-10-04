@@ -247,7 +247,7 @@ plt.legend(loc='upper right')
 
 # export to json
 data = {"everyStep":everyStep}
-with open("./output2.json", "w") as f:
+with open("output.json", "w") as f:
     json.dump(data, f)
 
 #for i in range(200):
