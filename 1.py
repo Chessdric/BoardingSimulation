@@ -15,7 +15,6 @@ class Person:
         self.seat = number-self.row*4+4
         self.seated = False
         self.timer = 0
-        self.color = list(np.random.choice(range(256), size=3))
         if(self.number < 10):
             self.numberForJson = "00" + str(self.number)
         elif(self.number<100):
@@ -52,7 +51,8 @@ gateToPlane = 50
 rowsInPlane = 50
 
 queue = [Person(-1, False)]*(queue+gateToPlane+rowsInPlane)
-#queue = [Person(-1,False)]*4
+
+
 # create People / numbers from 1 to 100
 
 numbers1To100 = [0]*100
@@ -63,8 +63,6 @@ random.shuffle(numbers1To100)
 
 for i in range(100):
     queue[i] = Person(numbers1To100[i], False)
-# queue[0]=Person(1,False)
-# queue[1]=Person(5,False)
 
 # create Rows
 rows = ["OOOO"]*25
@@ -197,8 +195,6 @@ def oneStep():
     everyStep.append(jsonString)
     
 
-    
-
 
 # checks wheter all people have boarded successfully
 def isNotFinished():
@@ -208,11 +204,10 @@ def isNotFinished():
     return False
 
 
-boardingTries = 1
+boardingTries = 100
 output = [0]*boardingTries
 
 # Simulate until everyone has boarded successfully and tells the time
-
 
 def simulate(boardingTries):
     for i in range(boardingTries):
@@ -229,9 +224,8 @@ simulate(boardingTries)
 mean = np.mean(output)
 std = np.std(output)
 
-# print(output)
-# print("mean: ", mean)
-# print("std: ", std)
+print("mean: ", mean)
+print("std: ", std)
 
 plt.hist(output, bins=50, label="Histogram", density=True)
 
@@ -240,22 +234,10 @@ plt.ylabel("Percentage")
 plt.xlabel("Time in s")
 
 plt.legend(loc='upper right')
-# plt.show()
-
-#color = list(np.random.choice(range(256), size=3))
+plt.show()
 
 
 # export to json
-data = {"everyStep":everyStep}
-with open("output.json", "w") as f:
-    json.dump(data, f)
-
-#for i in range(200):
-    #print(fiveRowsWithPersons[i][0].number, " ", fiveRowsWithPersons[i][1].number, " ", fiveRowsWithPersons[i][2].number, " ", fiveRowsWithPersons[i][3].number, " ", fiveRowsWithPersons[i][4].number)
-
-
-
-#print(everyStep)
-# print(cedric is very cool yes i want a good grade)
-# for i in queue:
-#   print(i.color)
+#data = {"everyStep":everyStep}
+#with open("output.json", "w") as f:
+#    json.dump(data, f)
